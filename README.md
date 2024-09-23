@@ -66,9 +66,19 @@ Select the port which is connected to the STM32-Board
 
 ![Open the port selector](images/port_select.png)
 
-### 2.5 Add the code
+### 2.5 Select Board Part Number
+
+Go to Tools > Board part number
+
+Select "**Generic L412KBTx**"
+
+### 2.6 Add the code
 
 Add the template code found in [template.ino](template.ino)
+
+There's a **copy** button in the top right to get all of the code.
+
+Replace **ALL** of the code in the sketch with the template. 
 
 
 ## Step 3 - Install STM32CubeProgrammer 
@@ -76,6 +86,8 @@ Add the template code found in [template.ino](template.ino)
 Before you can upload and run the code, you need to have the STM32CubeProgrammer installed on your system.
 
 The program can be installed from [here](https://www.st.com/en/development-tools/stm32cubeprog.html#get-software)
+
+Scroll the red buttons near the bottom and install for the system you have. 
 
 You'll be asked to give an email and then they will send the download link to that email. 
 
@@ -87,15 +99,14 @@ The download will include an installer. Run it and proceed through all of its st
 ### 4.1 STM32 Nucelo Board
 Place the STM32 Nucleo Board on the breadboard with the median separating the pins as such:
 
-![Wired STM32](images/stm32-wired.jpg)
+<img src="images/stm32-wired.jpg" alt="Wired STM32" height="500"/>
 
 ### 4.2 Wire the LEDs
 
-Wire the LEDs with each getting a resistor and being connected to pins on the STM32 board.
+Wire the LEDs with each being grounded through a resistor and being connected to pins on the STM32 board.
 
 The smaller leg of the LED needs to be connected to ground while the longer leg should be connected to a GPIO pin on the STM32
 
-![Wired breadboard](images/breadboard-wired.jpg)
 
 | LED Color | STM32 Pin |
 |-----------|-----------|
@@ -106,9 +117,14 @@ The smaller leg of the LED needs to be connected to ground while the longer leg 
 
 Make sure to ground each LED with a resistor.
 
+![Wired breadboard](images/breadboard-wired.jpg)
+
+
 ![breadboard diagram](images/breadboard.png) 
 
 > **Note** Connect the GND pin on the STM32 to the "-" channel on the breadboard to make it easier to connect each LED to ground via a resistor
+
+![wiring diagram](images/wiring_diagram.png)
 
 ## Step 5 - Running your code
 
@@ -153,3 +169,5 @@ void loop() {
 
 }
 ```
+
+What kind of cool patterns can you make?

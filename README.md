@@ -22,7 +22,8 @@ https://www.arduino.cc/en/software
 ## Step 2 - Configure Arduino IDE for STM32
 
 We have to install support for STM32 boards.   
-Instructions taken from [here](https://community.st.com/t5/stm32-mcus/how-to-program-and-debug-the-stm32-using-the-arduino-ide/ta-p/608514)
+Instructions taken from [here](https://community.st.com/t5/stm32-mcus/how-to-program-and-debug-the-stm32-using-the-arduino-ide/ta-p/608514), but the follow the
+ones given below. 
 
 ### 2.1 Collecting the boards
 
@@ -32,6 +33,8 @@ https://github.com/stm32duino/BoardManagerFiles/raw/main/package_stmicroelectron
 
 ![Open preferences](images/preferences.png)
 ![Add the url](images/additional_board.png)
+
+Add the URL given above to "Additional Boards Managers URLs" field and then click **OK**.
 
 ### 2.2 Installing the boards
 
@@ -57,6 +60,9 @@ Select **Generic STM32L4 series**
 Go to Tools > Port
 
 Select the port which is connected to the STM32-Board
+
+> **Note:** If the STM32 is not connected to your laptop over USB, then it will not show up under ports. 
+
 
 ![Open the port selector](images/port_select.png)
 
@@ -96,7 +102,13 @@ The smaller leg of the LED needs to be connected to ground while the longer leg 
 | Red | A1 |
 | Green | A7 |
 | Blue | A2 | 
-| White | A3 | 
+| Orange (Looks white) | A3 | 
+
+Make sure to ground each LED with a resistor.
+
+![breadboard diagram](images/breadboard.png) 
+
+> **Note** Connect the GND pin on the STM32 to the "-" channel on the breadboard to make it easier to connect each LED to ground via a resistor
 
 ## Step 5 - Running your code
 
